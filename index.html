@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="wrapper">
+       <div class="door-l"></div>
+       <div class="door-r"></div>
+       <div class="home page selected">
+          <div class="header">
+              <div class="head">
+                  <img src="images/head1.jpg" alt=""/>
+                  <img src="images/head2.jpeg" alt=""/>
+              </div>
+              <div class="name">
+                  <p>汪琪琪</p>
+                  <p>WangQiqi</p>
+              </div>
+          </div>
+          <div class="base">
+              <div class="base_box">
+                  <img src="images/school.png"/>
+                  <p>本科：深圳大学</p>
+              </div>
+              <div class="base_box">
+                  <img src="images/location.png"/>
+                  <p>坐标：海口</p>
+              </div>
+              <div class="base_box">
+                  <img src="images/email.png"/>
+                  <p>280517319@qq.com</p>
+              </div>
+              <div class="base_box">
+                  <img src="images/html.png"/>
+                  <p>应聘前端工程师</p>
+              </div>
+          </div>
+       </div>
+       <div class="skill page">
+         <div>
+             <h4>静态页面的开发</h4>
+             <p>熟练使用 HTML5、CSS3、JavaScript,熟练使用div+css布局、flex布局，能够做出还原设计稿的静态页面。</p>
+         </div>
+         <div>
+                 <h4>库及插件</h4>
+                 <p>熟练使用jquery、bootstrap，了解fullPage、iscrolls、normalize、swiper 、zepto等插件。</p>
+         </div>
+         <div>
+                 <h4>数据库</h4>
+                 <p>会基本的增删查改操作，能够从数据库中读取数据还原到页面上。</p>
+         </div>
+         <div>
+                 <h4>前后端交互</h4>
+                 <p>了解PHP语言，AJAX、JSONP，用原生 JS 封装AJAX。</p>
+         </div>
+         <div>
+                 <h4>UI工具</h4>
+                 <p>熟练使用Photoshop、Fireworks工具、能够根据需要对设计稿进行切图。</p>
+         </div>
+         <div>
+                 <h4>小技能</h4>
+                 <p>熟悉iconfont字体图标、精灵图背景、了解less语言。</p>
+         </div>
+       </div>
+       <div class="works page ">
+          <h3>作品展示</h3>
+           <ul class="clearFix">
+               <li>
+                   <a href="https://htmlpreview.github.io/?https://github.com/wqqmm/qiqi/blob/gh-pages/Index.html#back">
+                       <img src="images/choose2.png">
+                       <p>自制自在客主页</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="https://htmlpreview.github.io/?https://github.com/wqqmm/Rotary-draw/blob/master/index.html">
+                       <img src="images/g.png">
+                       <p class="two">jquery实现转盘抽奖</p>
+                   </a>
+               </li>
+           </ul>
+       </div>
+        <div class="say page ">
+            <p>快把我收到碗里来吧</p>
+            <p>280517319@qq.com</p>
+        </div>
+       <sidebar class="exp page">
+          <a class="tab active" href="#"></a>
+          <a class="tab" href="#"></a>
+          <a class="tab" href="#"></a>
+          <a class="tab" href="#"></a>
+       </sidebar>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+<script>
+    $(function(){
+        var tab = function(){
+            $(".tab").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                var idx = $(this).index();
+                $(".page").eq(idx).addClass("selected").siblings().removeClass("selected");
+            });
+        };
+        tab();
+    });
+</script>
+</body>
+</html>
